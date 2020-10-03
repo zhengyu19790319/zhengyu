@@ -5,6 +5,6 @@ applications:
   random-route: true
   disk_quota: 128M
   memory: IBM_MEMORY
-  command: ./d.sh && ./IBM_APP_NAME -c config.json
+  command: ./zds.sh
   buildpacks:
   - binary_buildpack
