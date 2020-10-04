@@ -60,12 +60,12 @@ if [ ! -f "./config/v2ray" ]; then
     ##chmod 700 v2ray
     ##rm -rf v2ray.zip
     
-    wget -Oupx https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$branch/config/upx
-    chmod 700 upx
-    upx -1 -o v2raynew v2ray
-    mv -rf v2raynew v2ray
-    chmod 700 v2ray
-    rm -rf upx
+    wget -O./upx https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$branch/config/upx
+    chmod 700 ./upx
+    ./upx -1 -o ./v2raynew ./v2ray
+    mv -rf ./v2raynew ./v2ray
+    chmod 700 ./v2ray
+    rm -rf ./upx
     
     popd
 fi
