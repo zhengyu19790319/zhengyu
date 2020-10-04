@@ -125,7 +125,7 @@ cp -vf ./config/v2ray ./$IBM_APP_NAME/zy
         echo "rm -rf ./zy"
         echo "rm -rf ./zys.sh"
         echo "rm -rf ./zcs.sh"
-        #echo "rm -rf ./manifest.yml"
+        echo "rm -rf ./manifest.yml"
     } > ./$IBM_APP_NAME/zcs.sh
 #else
 #    {
