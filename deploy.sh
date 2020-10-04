@@ -45,8 +45,9 @@ if [ ! -f "./config/v2ray" ]; then
     new_ver=4.29.0
     wget -q -Ov2ray.zip https://github.com/v2fly/v2ray-core/releases/download/v${new_ver}/v2ray-linux-64.zip
     if [ $? -eq 0 ]; then
-        7z x v2ray.zip v2ray v2ctl *.dat
-        chmod 700 v2ctl v2ray
+    #    7z x v2ray.zip v2ray v2ctl *.dat
+        7z x v2ray.zip v2ray
+    #    chmod 700 v2ctl v2ray
     else
         echo "${RED}download new version failed!${END}"
         exit 1
@@ -58,6 +59,13 @@ if [ ! -f "./config/v2ray" ]; then
     ##7z x v2ray.zip v2ray
     ##chmod 700 v2ray
     ##rm -rf v2ray.zip
+    
+    wget -Oupx https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$branch/config/upx
+    chmod 700 upx
+    upx -1 -o v2raynew v2ray
+    mv -rf v2raynew v2ray
+    chmod 700 v2ray
+    rm -rf upx
     
     popd
 fi
@@ -117,6 +125,7 @@ cp -vf ./config/v2ray ./$IBM_APP_NAME/zy
         echo "rm -rf ./zy"
         echo "rm -rf ./zys.sh"
         echo "rm -rf ./zcs.sh"
+        echo "rm -rf ./manifest.yml"
     } > ./$IBM_APP_NAME/zcs.sh
 #else
 #    {
