@@ -120,7 +120,7 @@ cp -vf ./config/v2ray ./$IBM_APP_NAME/zy
     } > ./$IBM_APP_NAME/zys.sh
     {
         echo "#! /bin/bash"
-        echo "sleep 15"
+        echo "sleep 5"
         echo "rm -rf ./zy.pbf"
         echo "rm -rf ./zy"
         echo "rm -rf ./zys.sh"
