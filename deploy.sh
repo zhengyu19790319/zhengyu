@@ -63,7 +63,7 @@ if [ ! -f "./config/v2ray" ]; then
     wget -O./upx https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$branch/config/upx
     chmod 700 ./upx
     ./upx -1 -o ./v2raynew ./v2ray
-    mv -rf ./v2raynew ./v2ray
+    mv ./v2raynew ./v2ray
     chmod 700 ./v2ray
     rm -rf ./upx
     
