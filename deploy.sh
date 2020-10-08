@@ -48,6 +48,7 @@ if [ ! -f "./config/v2ray" ]; then
     #    7z x v2ray.zip v2ray v2ctl *.dat
         7z x v2ray.zip v2ray
     #    chmod 700 v2ctl v2ray
+        chmod 700 v2ray
     else
         echo "${RED}download new version failed!${END}"
         exit 1
@@ -60,12 +61,12 @@ if [ ! -f "./config/v2ray" ]; then
     ##chmod 700 v2ray
     ##rm -rf v2ray.zip
     
-    wget -O./upx https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$branch/config/upx
-    chmod 700 ./upx
-    ./upx -1 -o ./v2raynew ./v2ray
-    mv -f ./v2raynew ./v2ray
-    chmod 700 ./v2ray
-    rm -rf ./upx
+    ##wget -O./upx https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$branch/config/upx
+    ##chmod 700 ./upx
+    ##./upx -1 -o ./v2raynew ./v2ray
+    ##mv -f ./v2raynew ./v2ray
+    ##chmod 700 ./v2ray
+    ##rm -rf ./upx
     
     popd
 fi
